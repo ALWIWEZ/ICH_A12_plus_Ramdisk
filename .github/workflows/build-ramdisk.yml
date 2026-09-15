@@ -63,10 +63,11 @@ jobs:
         run: |
           set -e
           brew update
-          brew install ipsw curl python@3
+          brew install ipsw curl python@3 libpng pkg-config
           which ipsw || { echo "FAIL: ipsw not installed" >&2; exit 1; }
           which python3 || { echo "FAIL: python3 not installed" >&2; exit 1; }
           echo "OK: ipsw $(ipsw version 2>/dev/null | head -1)"
+          echo "OK: libpng $(pkg-config --modversion libpng)"
 
       - name: Setup Python venv
         run: |
