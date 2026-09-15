@@ -262,7 +262,7 @@ jobs:
             done
           ) &
           
-          ./build.sh $ARGS
+          ./build.sh $ARGS --with-fw
 
       - name: Package artifact
         run: |
