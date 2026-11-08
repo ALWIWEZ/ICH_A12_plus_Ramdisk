@@ -26,7 +26,7 @@ on:
       ios_version:
         description: 'iOS version or Build ID (e.g. 26.5.2 or 23F84)'
         required: true
-        default: '23F84'
+        default: '27.0.1'
         type: string
       kernel:
         description: 'Kernel patch mode'
